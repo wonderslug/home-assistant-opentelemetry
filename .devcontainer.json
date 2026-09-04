@@ -1,7 +1,7 @@
 {
     "name": "wonderslug/home-assistant-opentelemetry",
     "image": "mcr.microsoft.com/devcontainers/base:debian",
-    "postCreateCommand": "scripts/setup",
+    "postCreateCommand": "sudo chown -R vscode:vscode /home/vscode/.claude/plugins && scripts/setup",
     "forwardPorts": [
         8123
     ],
