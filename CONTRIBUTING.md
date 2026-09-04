@@ -16,7 +16,7 @@ Pull requests are the best way to propose changes to the codebase.
 1. Fork the repo and create your branch from `main`.
 2. If you've changed something, update the documentation.
 3. Make sure your code lints (using `scripts/lint`).
-4. Test you contribution.
+4. Make sure the tests pass (using `scripts/test`).
 5. Issue that pull request!
 
 ## Any contributions you make will be under the MIT Software License
@@ -47,6 +47,15 @@ People *love* thorough bug reports. I'm not even kidding.
 Use [black](https://github.com/ambv/black) to make sure the code follows the style.
 
 ## Test your code modification
+
+Tests live in [`tests/`](./tests) and run against a real Home Assistant instance
+provided by
+[pytest-homeassistant-custom-component](https://github.com/MatthewFlamm/pytest-homeassistant-custom-component).
+Run them with `scripts/test`; any extra arguments are passed straight to pytest,
+so `scripts/test tests/test_config_flow.py -k duplicate` works as expected.
+
+That package pins the exact `homeassistant` version it tests against, so keep it
+in step with the pin in `requirements_dev.txt` — bump both in the same change.
 
 This custom component started from the [integration_blueprint template](https://github.com/ludeeus/integration_blueprint).
 

@@ -1,0 +1,4 @@
+-r requirements_dev.txt
+# Pins homeassistant to the same version as requirements_dev.txt.
+# Bump both together.
+pytest-homeassistant-custom-component==0.13.340
