@@ -43,7 +43,8 @@
     },
     "remoteUser": "vscode",
     "mounts": [
-        "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached"
+        "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached",
+        "source=claude-plugins-${devcontainerId},target=/home/vscode/.claude/plugins,type=volume"
     ],
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
@@ -51,6 +52,8 @@
         },
         "ghcr.io/devcontainers-extra/features/apt-packages:1": {
             "packages": "ffmpeg,libturbojpeg0,libpcap-dev"
-        }
+        },
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
     }
 }
