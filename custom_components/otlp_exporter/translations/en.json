@@ -1,0 +1,15 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Configure the OTLP endpoint (OpenTelemetry Collector) to export telemetry to.",
+                "data": {
+                    "url": "OTLP endpoint URL"
+                }
+            }
+        },
+        "abort": {
+            "already_configured": "This entry is already configured."
+        }
+    }
+}

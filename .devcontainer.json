@@ -1,5 +1,5 @@
 {
-    "name": "ludeeus/integration_blueprint",
+    "name": "wonderslug/home-assistant-opentelemetry",
     "image": "mcr.microsoft.com/devcontainers/base:debian",
     "postCreateCommand": "scripts/setup",
     "forwardPorts": [
@@ -14,10 +14,16 @@
     "customizations": {
         "vscode": {
             "extensions": [
+                "anthropic.claude-code",
                 "charliermarsh.ruff",
+                "eamodio.gitlens",
                 "github.vscode-pull-request-github",
+                "juanlb.claude-commit",
+                "ms-python.autopep8",
+                "ms-python.debugpy",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
+                "ms-python.vscode-python-envs",
                 "ryanluker.vscode-coverage-gutters"
             ],
             "settings": {
